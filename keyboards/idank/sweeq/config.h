@@ -4,3 +4,7 @@
 #pragma once
 
 #define MASTER_RIGHT
+
+#define SERIAL_USART_TX_PIN GP1
+
+#define POINTER_CPI 1000

@@ -1,6 +1,6 @@
 {
-    "userspace_version": "1.1",
+    "userspace_version": "1.0",
     "build_targets": [
-        ["keyball/keyball39", "cjudkins"]
+        ["keyball/keyball_duo", "cjudkins"]
     ]
 }

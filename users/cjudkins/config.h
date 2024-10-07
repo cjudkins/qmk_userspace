@@ -20,21 +20,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-// Pointer support
-#define POINTING_DEVICE_COMBINED
-#define SPLIT_POINTING_ENABLE
-
-#define POINTING_DEVICE_ROTATION_90
-#define POINTING_DEVICE_INVERT_Y
-#define POINTING_DEVICE_ROTATION_270_RIGHT
-#define POINTING_DEVICE_INVERT_Y_RIGHT
-
-// Personal defines
-#define POINTER_CPI 2000
-#define SCROLL_DIVISOR 24.0
-//#define HORIZONTAL_SCROLL_ENABLE
-
-// Behaviors
+// QMK Behaviors
 #define TAP_CODE_DELAY 5
 #define COMBO_TERM 25                   // Timer for how fast you need to be to trigger a combo
 #define COMBO_STRICT_TIMER              // Prevent the combo timer from restarting at each key in a combo sequence

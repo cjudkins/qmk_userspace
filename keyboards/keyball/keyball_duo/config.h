@@ -31,44 +31,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define SOFT_SERIAL_PIN         GP1
 #define SPLIT_HAND_MATRIX_GRID  GP27, GP9
 #define SPLIT_HAND_MATRIX_GRID_LOW_IS_LEFT
-//#define SPLIT_USB_DETECT
-//#define SPLIT_USB_TIMEOUT       500
-
-// If your PC does not recognize Keyball, try setting this macro. This macro
-// increases the firmware size by 200 bytes, so it is disabled by default, but
-// it has been reported to work well in such cases.
-//#define SPLIT_WATCHDOG_ENABLE
-
-//#define SPLIT_TRANSACTION_IDS_KB KEYBALL_GET_INFO, KEYBALL_GET_MOTION, KEYBALL_SET_CPI
-
-// RGB LED settings
-#define WS2812_DI_PIN       GP0
-#ifdef RGBLIGHT_ENABLE
-#    define RGBLIGHT_LED_COUNT      48
-#    define RGBLED_SPLIT    { 24, 24 }  // (24 + 22)
-#    ifndef RGBLIGHT_LIMIT_VAL
-#        define RGBLIGHT_LIMIT_VAL  150 // limitated for power consumption
-#    endif
-#    ifndef RGBLIGHT_VAL_STEP
-#        define RGBLIGHT_VAL_STEP   15
-#    endif
-#    ifndef RGBLIGHT_HUE_STEP
-#        define RGBLIGHT_HUE_STEP   17
-#    endif
-#    ifndef RGBLIGHT_SAT_STEP
-#        define RGBLIGHT_SAT_STEP   17
-#    endif
-#    define RGBLIGHT_DEFAULT_MODE RGBLIGHT_MODE_RAINBOW_SWIRL
-#endif
-#ifdef RGB_MATRIX_ENABLE
-#    define RGB_MATRIX_SPLIT    { 24, 24 }
-#endif
-
-//#ifndef OLED_FONT_H
-//#    define OLED_FONT_H "keyboards/keyball/lib/logofont/logofont.c"
-//#    define OLED_FONT_START 32
-//#    define OLED_FONT_END 195
-//#endif
 
 #if !defined(LAYER_STATE_8BIT) && !defined(LAYER_STATE_16BIT) && !defined(LAYER_STATE_32BIT)
 #    define LAYER_STATE_8BIT
@@ -80,3 +42,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define SPI_MOSI_PIN GP23
 
 #define POINTING_DEVICE_CS_PIN GP21
+
+// Enable dual trackball
+#define POINTING_DEVICE_COMBINED
+#define SPLIT_POINTING_ENABLE
+
+// Left-side trackball orientation correction
+#define POINTING_DEVICE_ROTATION_90
+#define POINTING_DEVICE_INVERT_Y
+
+// Right-side trackball orientation correction
+#define POINTING_DEVICE_ROTATION_270_RIGHT
+#define POINTING_DEVICE_INVERT_Y_RIGHT

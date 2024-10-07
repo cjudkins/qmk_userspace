@@ -1,5 +1,5 @@
 # Link Time Optimization required for size.
-# LTO_ENABLE = yes
+LTO_ENABLE = yes
 
 # Build Options
 BOOTMAGIC_ENABLE = no       # Enable Bootmagic Lite
@@ -16,11 +16,9 @@ SERIAL_DRIVER = vendor
 # Optical sensor driver for trackball.
 POINTING_DEVICE_ENABLE = yes
 POINTING_DEVICE_DRIVER = pmw3360
-#SRC += drivers/pmw3360/pmw3360.c
-#QUANTUM_LIB_SRC += spi_master.c # Optical sensor use SPI to communicate
 
 # This is unnecessary for processing KC_MS_BTN*.
-MOUSEKEY_ENABLE = no
+MOUSEKEY_ENABLE = yes
 
 # Enabled only one of RGBLIGHT and RGB_MATRIX if necessary.
 RGBLIGHT_ENABLE = no        # Enable RGBLIGHT
@@ -31,11 +29,7 @@ RGB_MATRIX_DRIVER = ws2812
 SLEEP_LED_ENABLE = no       # Breathing sleep LED during USB suspend
 
 # To support OLED
-OLED_ENABLE = no                # Please Enable this in each keymaps.
-#SRC += lib/oledkit/oledkit.c    # OLED utility for Keyball series.
-
-# Include common library
-#SRC += lib/keyball/keyball.c
+OLED_ENABLE = yes                # Please Enable this in each keymaps.
 
 # Disable other features to squeeze firmware size
 SPACE_CADET_ENABLE = no
