@@ -26,13 +26,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_Q     , KC_W     , KC_F     , KC_P     , KC_B     ,                            KC_J     , KC_L     , KC_U     , KC_Y     , KC_QUOT  ,
     KC_A     , KC_R     , KC_S     , KC_T     , KC_G     ,                            KC_M     , KC_N     , KC_E     , KC_I     , KC_O     ,
     KC_Z     , KC_X     , KC_C     , KC_D     , KC_V     ,                            KC_K     , KC_H     , KC_COMM  , KC_DOT   , KC_QUES  ,
-    XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , MO(1)    , OSFT     ,     KC_SPC    , MO(2)    , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX
+    KC_BTN3  , KC_BTN2  , KC_BTN1  , KC_BSPC  , MO(1)    , OSFT     ,      KC_SPC   , MO(2)    , KC_BSPC  , KC_BTN1  , KC_BTN2  , KC_BTN3
   ),
 
   [1] = LAYOUT_universal(
-    KC_ESC   , CUT      , COPY     , PASTE    , UNDO     ,                            SW_WIN   , TAB_L    , DSKTP_L  , DSKTP_R  , TAB_R    ,
-    OSFT     , OCTL     , OALT     , OGUI     , KC_CAPS  ,                            SW_APP   , KC_LEFT  , KC_DOWN  , KC_UP    , KC_RGHT  ,
-    OMEH     , S(KC_TAB), KC_TAB   , KC_ENT   , _______  ,                            C(KC_UP) , BACK     , KC_PGDN  , KC_PGUP  , FWRD     ,
+    KC_ESC   , CUT      , COPY     , PASTE    , UNDO     ,                            _______  , TAB_L    , DSKTP_L  , DSKTP_R  , TAB_R    ,
+    OSFT     , OCTL     , OALT     , OGUI     , KC_CAPS  ,                            KC_HOME  , KC_LEFT  , KC_DOWN  , KC_UP    , KC_RGHT  ,
+    OMEH     , _______  , KC_TAB   , KC_ENT   , _______  ,                            KC_END   , BACK     , KC_PGDN  , KC_PGUP  , FWRD     ,
     _______  , _______  , _______  , _______  , _______  , LLOCK    ,      _______  , _______  , _______  , _______  , _______  , _______
   ),
 
@@ -44,9 +44,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [3] = LAYOUT_universal(
-    SCLOCK   , KC_INS   , KC_PAUS  , KC_PSCR  , _______  ,                            _______  , KC_F1    , KC_F2    , KC_F3    , KC_F4    ,
-    FQUIT    , KC_MPRV  , KC_MPLY  , KC_MNXT  , _______  ,                            _______  , KC_F5    , KC_F6    , KC_F7    , KC_F8    ,
-    _______  , KC_VOLD  , _______  , KC_VOLU  , _______  ,                            _______  , KC_F9    , KC_F10   , KC_F11   , KC_F12   ,
+    SCLOCK   , KC_INS   , KC_PAUS  , KC_PSCR  , SW_WIN   ,                            _______  , KC_F1    , KC_F2    , KC_F3    , KC_F4    ,
+    FQUIT    , KC_MPRV  , KC_MPLY  , KC_MNXT  , SW_APP   ,                            _______  , KC_F5    , KC_F6    , KC_F7    , KC_F8    ,
+    _______  , KC_VOLD  , _______  , KC_VOLU  , C(KC_UP) ,                            _______  , KC_F9    , KC_F10   , KC_F11   , KC_F12   ,
     _______  , _______  , _______  , _______  , _______  , _______  ,      _______  , _______  , _______  , _______  , _______  , _______
   )
 }; 

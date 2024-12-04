@@ -43,7 +43,7 @@ __attribute__((weak))
 bool oled_task_keymap(void) {
     return false;
 }
-    
+
 bool oled_task_user(void) {
     if (is_keyboard_master()) {
         render_status();  // Renders the current keyboard state (layer, lock, caps, scroll, etc)
